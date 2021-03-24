@@ -1,15 +1,3 @@
-"""
-### 更新情報 ### 
-動作環境: python 3.9.0 64bit
-更新後バージョン : a1.2.3
-更新日 : 2020/11/26
-更新者 : Uchida
-
-更新内容 : 
-・win_or_lose_decision(count1, count2, player1, player2)関数を追加．勝敗判定を行う関数で，count1はプレイヤー1がクリアするのに要したターン数，count2はプレイヤー2がクリアするのに要したターン数
-
-"""
-
 import random
 import time
 import math
