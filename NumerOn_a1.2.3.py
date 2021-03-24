@@ -43,7 +43,7 @@ def numeric_decomposition(number) :
     num3 = int(number % 10)
     return num1, num2, num3
 
-### キーボードからの入力を行う(引数なし，返り値はint型整数3つ)
+### キーボードからの入力を行う(引数はint型整数1つ，返り値はint型整数3つ)
 def user_input(flag) :
     if flag == 1 :
         str1 = '数字を入力してください(半角数字) : '
@@ -84,7 +84,7 @@ def check_number(answer_num, input_num) :
         
     return eat, byte
 
-### 
+### 対戦相手の3桁の数字を当てるまでプレイ(引数はint型配列[要素数3つ])
 def run(answer_num) :
     # 予想回数を記録する変数
     count = 0
@@ -133,11 +133,11 @@ def main() :
 
     # プレイヤー1が答えの3桁の数字を入力
     name1, answer_num1 = input_player_info(1)
-    disp_clear()
+    disp_clear() # 画面をクリア
     
     # プレイヤー2が答えの3桁の数字を入力
     name2, answer_num2 = input_player_info(2)
-    disp_clear()
+    disp_clear() # 画面をクリア
 
     # プレイヤー1のプレイ
     count1 = play_game(name1,answer_num2) # プレイヤー1がクリアするまでの予想回数を返り値で取得
@@ -147,7 +147,7 @@ def main() :
     
     win_or_lose_dicision(count1, count2, name1, name2) # 勝敗判定
 
-    write_file(name1,count1,name2,count2)
+    write_file(name1,count1,name2,count2) # 各プレイヤー名と数字を当てるまでにかかったターン数をcsvファイルに記録
     
     print('prog fin') # デバッグ
 
